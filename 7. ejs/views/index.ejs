@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info</title>
+</head>
+<body>
+    <!-- Display Variables -->
+    <h1>Wall Knight: <%= userName %></h1>
+    <h1>Knight Id: <%= id %></h1>
+
+    <!-- Conditional Statement -->
+    <% if(id >= 100){ %>
+        <h1>Newbie Knight</h1>
+    <% } else if(id < 100 && id >= 50){ %>
+        <h1>Knight Watcher</h1>
+    <% }  else if(id < 50 && id >= 10){ %>
+        <h1>Superior Knight</h1>
+    <% }  else if(id < 10 && id >= 2){ %>
+        <h1>Commanding Knight</h1>
+    <% }  else if(id === 1){ %>
+        <h1>Lord Commander</h1>
+    <% }  else{ %>
+        <h1>You are not from nightwatch</h1>
+    <% } %>
+
+    <!-- Loops -->
+    <% for(let i=1; i<=10; i++){ %>
+        <h2>On Your Way My Lord</h2>
+    <% } %>
+
+    <% var currentDay = new Date(); %>
+    <%= currentDay %>
+
+</body>
+</html>
